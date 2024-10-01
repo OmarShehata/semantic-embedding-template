@@ -51,7 +51,18 @@ console.log(results.map(item => [item.item.metadata.text, item.score]))
 pnpm openai-embedding
 ```
 
-Exactly the same as the example above, but is hooked up to the OpenAI API. Requires setting the env variable `OPEN_API_KEY`. 
+Exactly the same as the example above, but is hooked up to the OpenAI API. Requires setting the env variable `OPEN_API_KEY`.
+
+### LM Studio embedding
+
+`example-lmstudio-embedding/index.js`
+
+Exactly the same as the example above, but is hooked up to the OpenAI compatible API provided by [LM Studio](https://lmstudio.ai/), which runs entirely locally.
+
+1. Install [LM Studio](https://lmstudio.ai/).
+2. Download the [nomic-ai/nomic-embed-text-v1.5-GGUF](https://huggingface.co/nomic-ai/nomic-embed-text-v1.5-GGUF) model (you can do this from within the Discover tab of LM Studio).
+3. From the Developer tab, load the model and start the local server.
+4. Run `pnpm lmstudio-embedding` (or `npm run lmstudio-embedding`).
 
 ### Clustering
 
